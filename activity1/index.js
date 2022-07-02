@@ -46,12 +46,35 @@ const dblclickImg = () => {
 dblclickBtn.addEventListener('dblclick', dblclickImg);
 // 4. Traffic Lights
 // Selectors
+const stopBtn = document.querySelector('#btnStop');
+const readyBtn = document.querySelector('#btnReady');
+const goBtn = document.querySelector('#btnGo');
 
+const stopLight = document.querySelector('#stopDiv');
+const readyLight = document.querySelector('#readyDiv');
+const goLight = document.querySelector('#goDiv');
 // Function 1
+const redLight = () =>{
+  stopLight.style.background = 'red';
+  readyLight.style.background = 'black';
+  goLight.style.background = 'black';
+}
 // Function 2
+const yellowLight = () =>{
+  stopLight.style.background = 'black';
+  readyLight.style.background = 'yellow';
+  goLight.style.background = 'black';
+}
 // Function 3
-
+const greenLight = () =>{
+  stopLight.style.background = 'black';
+  readyLight.style.background = 'black';
+  goLight.style.background = 'green';
+}
 // Call the events
+stopBtn.addEventListener('click', redLight);
+readyBtn.addEventListener('click', yellowLight);
+goBtn.addEventListener('click', greenLight);
 
 // 5. Change textbox border colours
 // Selectors
