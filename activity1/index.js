@@ -28,10 +28,6 @@ btnName.addEventListener('click', nameClickAppear);
 // Switch lights on mouseover
 // When the mouse cursor is on the lightbulb image, the lighton image should show; and revert back to the lightoff image when the mouse moves off.
 
-// Selectors
-// Function
-// Call the event
-
 const offBulb = document.querySelector("#imageOff");
 const turnBulbOn = () => {
   offBulb.src = "images/lighton.png"
@@ -42,15 +38,12 @@ const turnBulbOn = () => {
 offBulb.addEventListener('mouseover', turnBulbOn);
 
 // 3. Double click button to display content
-// Selectors
 
-/* Function {
-  //some code here
-  //create a new img element
-}*/
-
-// Call the event
-
+const dblclickBtn = document.querySelector('#btndbName');
+const dblclickImg = () => {
+  document.querySelector('#displayPara').innerHTML = '<img src="images/smileyface.png"/>'
+}
+dblclickBtn.addEventListener('dblclick', dblclickImg);
 // 4. Traffic Lights
 // Selectors
 
