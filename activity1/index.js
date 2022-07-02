@@ -32,7 +32,14 @@ btnName.addEventListener('click', nameClickAppear);
 // Function
 // Call the event
 
-
+const offBulb = document.querySelector("#imageOff");
+const turnBulbOn = () => {
+  offBulb.src = "images/lighton.png"
+  offBulb.addEventListener('mouseout', () => {
+    offBulb.src = "images/lightoff.png"
+  });
+}
+offBulb.addEventListener('mouseover', turnBulbOn);
 
 // 3. Double click button to display content
 // Selectors
